@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Lander</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #000000;
+      --bg-dark: #1c1c1c;
+      --text-dark: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dashed currentColor;
+    }
+
+    a:hover {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .toggle-btn {
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #0066cc;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #0052a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>This is a simple single-page lander with a list of links.</p>
+    
+    <ul>
+      <li><a href="#link1">Link One</a></li>
+      <li><a href="#link2">Link Two</a></li>
+      <li><a href="#link3">Link Three</a></li>
+      <li><a href="#link4">Link Four</a></li>
+      <li><a href="#link5">Link Five</a></li>
+    </ul>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
